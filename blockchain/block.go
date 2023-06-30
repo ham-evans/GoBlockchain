@@ -3,6 +3,7 @@ package blockchain
 import (
 	"bytes"
 	"encoding/gob"
+	"fmt"
 	"log"
 )
 
@@ -57,6 +58,7 @@ func Deserialize (data []byte) *Block {
 // Handle - Gerneral error handler
 func Handle (err error) {
 	if err != nil {
+		fmt.Println("Error!")
 		log.Panic(err)
 	}
 }
